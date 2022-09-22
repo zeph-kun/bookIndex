@@ -7,7 +7,9 @@
         <input v-model="keyword" type="text" class="input" placeholder="Search" required>
         <input type="submit" value="Search" class="button">
       </form>
-      <BookList v-for="book in books" :key="book.id" :book="book" />
+      <div class="grid grid-cols-3 gap-3">
+        <BookList v-for="book in books" :key="book.id" :book="book" />
+      </div>
     </div>
   </div>
 </template>

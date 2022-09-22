@@ -8,7 +8,10 @@
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ info.authors.toString() }}</span>
+      <span v-if="!info.authors">No authors to display</span>
+      <span v-else>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ info.authors.toString() }}</span>
+      </span>
     </div>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <div class="content-center">
-      <h1>Google API Books</h1>
-      <div class="flex flex-row">
+    <div class="container mx-auto">
+      <div class="flex items-center flex-col">
+        <h1>Google API Books</h1>
         <form @submit.prevent="search">
           <div>
             <input v-model="keyword" type="text" class="block mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
@@ -13,9 +13,9 @@
           </div>
         </form>
       </div>
-      <div class="grid grid-cols-3 gap-3">
-        <BookList v-for="book in books" :key="book.id" :book="book" />
-      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-3">
+      <BookList v-for="book in books" :key="book.id" :book="book" />
     </div>
   </div>
 </template>

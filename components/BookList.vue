@@ -4,7 +4,10 @@
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ info.title }}</div>
         <p class="text-gray-700 text-base">
-          {{ info.description }}
+          <span v-if="!info.description">No description</span>
+          <span v-else>
+            {{ info.description.slice(0, 200) + '...'}}
+          </span>
         </p>
     </div>
     <div class="px-6 pt-4 pb-2">

@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     async search () {
-      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.keyword}?projection=full`)
+      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.keyword}?projection=full&maxResults=21`)
       console.log(response.data)
       this.books = response.data.items
     }
